@@ -8,6 +8,8 @@ To do this, I have downloaded two tables of the 2025-2026 Serie A season from FB
 
 The data has been downloaded before the last matchday, hence only 2 teams had played a total of 38 matches at the time of the download.
 
+In order to run the analysis, import the two cvs files (teams and players) and run the desired query.
+
 ## Data cleaning
 - the field "Nation" required me to remove a variable length prefix       --> "substr (Nation, instr(Nation, ' ')+1,3)"
 - the value for "minutes played" was stored as text with comma separators --> "CAST(replace("Min",',','') as INT)"
