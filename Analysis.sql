@@ -25,7 +25,7 @@ Who is playing little despite the numbers?
 SELECT Player, Squad, CAST(Replace("Min",',','') as INT)/"MP" as Min_per_game, Pos, MP,Starts, "G+A_90", "G+A", CAST(substr(Age,1,2) as INT) as age FROM Players
 WHERE 
 CAST(substr(Age,1,2) as INT)<=23 and
-MP<20 and G+A>5 
+MP<20 and "G+A">5 
 order by "G+A_90" desc;
 
 /* 
