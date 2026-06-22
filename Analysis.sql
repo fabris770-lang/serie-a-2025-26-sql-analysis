@@ -18,14 +18,14 @@ limit 20;
 
 /* 
 Q3 — Under-23 talents underutilized 
-Players born after 2002, more than 5 goals or assists, fewer than 20 starts. 
+Players born after 2002, more than 5 goals or assists, fewer than 20 matches played. 
 Who is playing little despite the numbers?
 */
 
 SELECT Player, Squad, CAST(Replace("Min",',','') as INT)/"MP" as Min_per_game, Pos, MP,Starts, "G+A_90", "G+A", CAST(substr(Age,1,2) as INT) as age FROM Players
 WHERE 
 CAST(substr(Age,1,2) as INT)<=23 and
-MP<20 and MP>=10
+MP<20 and G+A>5 
 order by "G+A_90" desc;
 
 /* 
