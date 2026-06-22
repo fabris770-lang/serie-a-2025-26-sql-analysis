@@ -2,17 +2,19 @@
 
 The goal of the analysis is to tell the Serie A 2025-2026 season through a different perspective. I investigated the data through 10 questions I wrote, quantifying the impacts of common stats (goals and assists) through relative metrics in order to read them in a new way.
 
+## Data
+
 To do this, I have downloaded two tables of the 2025-2026 Serie A season from FBref: one contains stats regarding team performances, and the other individual players' performances. The two tables are then joined based on team name.
 
 The data has been downloaded before the last matchday, hence only 2 teams had played a total of 38 matches at the time of the download.
 
-## These two tables had some columns that needed cleaning:
+## Data cleaning
 - the field "Nation" required me to remove a variable length prefix       --> "substr (Nation, instr(Nation, ' ')+1,3)"
 - the value for "minutes played" was stored as text with comma separators --> "CAST(replace("Min",',','') as INT)"
 - "Age" was formatted as years-days                                       --> "CAST(SUBSTR(Age,1,2) AS REAL"
 
 
-## Here below the 10 questions:
+## The 10 questions:
 
 Q1 — Offensive efficiency by team based on possession. Which teams have a very quick and effective attack?
 
