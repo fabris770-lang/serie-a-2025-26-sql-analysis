@@ -2,7 +2,7 @@ Serie A 2025-2026 Season - Analysis for a sport director
 
 The goal of the analysis is to tell the Serie A 2025-2026 season through a different perspective. I investigated the data through 10 questions I wrote, quantifying the impacts of common stats (goals and assists) through relative metrics in order to read them in a new way.
 
-In order to do this, I have downloaded two tables of the 2024-2025 Serie A season from FBref: one contains stats regarding team performances and one individual players performances. The two tables are then joined based on team name.
+In order to do this, I have downloaded two tables of the 2025-2026 Serie A season from FBref: one contains stats regarding team performances and one individual players performances. The two tables are then joined based on team name.
 
 These two tables had some columns that needed cleaning:
 - the field "Nation" required me to remove a variable length prefix       --> "substr (Nation, instr(Nation, ' ')+1,3)"
